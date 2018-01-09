@@ -2,10 +2,90 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-1.  You can use one of the following methods to obtain the checksum: 
+The executables in this package are built from source:
+
+Repository: http://git.savannah.gnu.org/cgit/gperf.git/
+Tag: v3.1
+SHA: 165bba235b2e3289967e505411500e08151f63e9
+
+On the following environment:
+
+* Windows 10 64-bit, x64-based processor. Version 1709, OS Build 16299.192
+* Visual Studio Community 2017. Version 15.2 (26430.14) Release
+* Cygwin: CYGWIN_NT-10.0 2.9.0(0.318/5/3) 2017-09-12 10:18 x86_64 Cygwin
+* Required Cygwin packages installed:
+  make, autoconf, autogen
+
+A variation of the instructions present in
+http://git.savannah.gnu.org/cgit/gperf.git/tree/README.windows was used to
+build the executables. In particular, the approach shown in:
+"2) Native binaries, built using the MS Visual C/C++ tool chain." was adapted.
+
+Building the 32-bit executable:
+
+* Open cmd.exe
+* Run C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat
+* Run C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -
+* Everythig below is run on the Cygwin prompt
+* Clone gperf and checkout the v3.1 tag
+* Copy the contents of gperf/build-aux/ to ~/msvc
+* Run the following:
+
+   $ win32_target=_WIN32_WINNT_WIN8
+   $ ./autogen.sh
+   $ ./configure --host=i686-w64-mingw32 --prefix=/usr/local/msvc32 \
+        CC="$HOME/msvc/compile cl -nologo" \
+        CFLAGS="-MD" \
+        CXX="$HOME/msvc/compile cl -nologo" \
+        CXXFLAGS="-MD" \
+        CPPFLAGS="-D_WIN32_WINNT=$win32_target -I/usr/local/msvc32/include" \
+        LDFLAGS="-L/usr/local/msvc32/lib" \
+        LD="link" \
+        NM="dumpbin -symbols" \
+        STRIP=":" \
+        AR="$HOME/msvc/ar-lib lib" \
+        RANLIB=":"
+   $ make
+
+32-bit executable can be found in src/gperf.exe
+
+Building the 64-bit executable:
+
+* Open cmd.exe
+* Run C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat
+* Run C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico -
+* Everythig below is run on the Cygwin prompt
+* Clone gperf and checkout the v3.1 tag
+* Copy the contents of gperf/build-aux/ to ~/msvc
+* Run the following:
+
+   $ win32_target=_WIN32_WINNT_WIN8
+   $ ./autogen.sh
+   $ ./configure --host=x86_64-w64-mingw32 --prefix=/usr/local/msvc64 \
+        CC="$HOME/msvc/compile cl -nologo" \
+        CFLAGS="-MD" \
+        CXX="$HOME/msvc/compile cl -nologo" \
+        CXXFLAGS="-MD" \
+        CPPFLAGS="-D_WIN32_WINNT=$win32_target -I/usr/local/msvc64/include" \
+        LDFLAGS="-L/usr/local/msvc64/lib" \
+        LD="link" \
+        NM="dumpbin -symbols" \
+        STRIP=":" \
+        AR="$HOME/msvc/ar-lib lib" \
+        RANLIB=":"
+   $ make
+
+64-bit executable can be found in src/gperf.exe
+
+You can use one of the following methods to obtain the checksum: 
     - Use powershell function 'Get-FileHash'
     - Use Chocolatey utility 'checksum.exe'
 
-    checksum32: BC2BA169CF12604FAF2551DC5A2E79298401C295CAB6A1C29714D20BB9DDC0E9
-    checksum64: 5CF7ADAC20CDCC1AC2CA31816B0E2E261781D88C3D57049F7EAE1FB85119F237
+* gperf.exe checksums:
+    32-bit: D8B5AC8AA03524F7424FFB4794BF84618026AD9B6920C4F3AFDF011E536BA6A8
+    64-bit: 411867B9020A11BCCA526FDE905519576AE9623105FC931A39412179F45D4299
+
+* gperf-3.1-*.zip checksums:
+    gperf-3.1-win32_x32.zip: BC2BA169CF12604FAF2551DC5A2E79298401C295CAB6A1C29714D20BB9DDC0E9
+    gperf-3.1-win64_x64.zip: 5CF7ADAC20CDCC1AC2CA31816B0E2E261781D88C3D57049F7EAE1FB85119F237
 
