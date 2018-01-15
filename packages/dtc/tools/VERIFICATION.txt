@@ -1,0 +1,28 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The files included in this package can be obtained from the MSYS2 repository:
+
+* 32-bit:
+http://repo.msys2.org/msys/i686/dtc-1.4.4-1-i686.pkg.tar.xz
+http://repo.msys2.org/msys/i686/msys2-runtime-2.9.0-2-i686.pkg.tar.xz
+
+* 64-bit:
+http://repo.msys2.org/msys/x86_64/dtc-1.4.4-1-x86_64.pkg.tar.xz
+http://repo.msys2.org/msys/x86_64/msys2-runtime-2.9.0-2-x86_64.pkg.tar.xz
+
+You can use one of the following methods to obtain the checksum: 
+    - Use powershell function 'Get-FileHash'
+    - Use Chocolatey utility 'checksum.exe'
+
+Checksums:
+
+* 32-bit:
+dtc-1.4.4-1-i686.pkg.tar.xz: 130DAB9318DB7371ABC45357704F60E0E121CEBC9800500DF0B59BFDD98758CB
+msys2-runtime-2.9.0-2-i686.pkg.tar.xz: FD57C9C76A1FE54B854A54183575C9C7732C8C7535F174EA035670066CC76B63
+
+* 64-bit:
+dtc-1.4.4-1-x86_64.pkg.tar.xz: FD57C9C76A1FE54B854A54183575C9C7732C8C7535F174EA035670066CC76B63
+msys2-runtime-2.9.0-2-x86_64.pkg.tar.xz: A3B8C0F46D9BA40830A868A8AA3B3951EAE4EF9FDB9A679D857432AB18819D19
+
