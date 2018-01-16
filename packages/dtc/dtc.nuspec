@@ -2,14 +2,14 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>dtc</id>
-    <version>1.4.4-1</version>
+    <id>dtc-msys2</id>
+    <version>1.4.4</version>
     <owners>Carles Cufí</owners>
 
-    <title>Device Tree Compiler</title>
+    <title>Device Tree Compiler (MSYS2 version)</title>
     <authors>David Gibson</authors>
     <projectUrl>https://www.devicetree.org/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/carlescufi/chocolatey-packages/d093452c1fc5c9f7c1bd9a0a5667c9c6b0173ac3/icons/dtc.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/carlescufi/chocolatey-packages/ff4b5dc05400c96ab7b8ce09a133b4a2d305b7ca/icons/dtc.png</iconUrl>
     <copyright>Copyright ©David Gibson.</copyright>
     <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
