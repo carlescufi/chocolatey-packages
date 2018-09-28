@@ -1,0 +1,15 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The file included in this package can be obtained from the following URL:
+
+https://sourceforge.net/projects/tumagcc/files/rsvg-convert-2.40.20.7z/download
+
+You can use one of the following methods to obtain the checksum (SHA256): 
+    - Use powershell function 'Get-FileHash'
+    - Use Chocolatey utility 'checksum.exe -t sha256'
+
+Checksum:
+
+rsvg-convert-2.40.20.7z: 36EFD6DC7D490D6FC9B28A4EBF89B57BD68AFB957287D5F34131CC7C3EE8B026 

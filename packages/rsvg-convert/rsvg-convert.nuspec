@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>rsvg-convert</id>
+    <version>2.40.20</version>
+    <owners>Carles Cufí</owners>
+
+    <title>rsvg-convert SVG conversion tool</title>
+    <authors>Raph Levien</authors>
+    <projectUrl>https://wiki.gnome.org/Projects/LibRsvg/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/carlescufi/chocolatey-packages/d575b42f02b2d1f7a912f13e212d0b12f78ea304/icons/librsvg.png</iconUrl>
+    <copyright>Copyright �Raph Levien.</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://gitlab.gnome.org/GNOME/librsvg</projectSourceUrl>
+    <packageSourceUrl>https://opensourcepack.blogspot.com/2012/06/rsvg-convert-svg-image-conversion-tool.html</packageSourceUrl>
+    <docsUrl>https://developer.gnome.org/rsvg/</docsUrl>
+    <bugTrackerUrl>https://gitlab.gnome.org/GNOME/librsvg/issues</bugTrackerUrl>
+    <tags>svg librsvg image conversion</tags>
+    <summary>rsvg-convert SVG converstion tool.</summary>
+    <description>librsvg is a free software SVG rendering library written as part of the GNOME project, intended to be lightweight and portable. rsvg-convert is a tool to convert SVG files from said library.</description>
+    <releaseNotes>https://gitlab.gnome.org/GNOME/librsvg/blob/master/NEWS</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
