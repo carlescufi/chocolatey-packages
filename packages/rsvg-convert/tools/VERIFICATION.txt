@@ -5,6 +5,8 @@ in verifying that this package's contents are trustworthy.
 The file included in this package can be obtained from the following URL:
 
 https://sourceforge.net/projects/tumagcc/files/rsvg-convert-2.40.20.7z/download
+and is maintained in:
+https://opensourcepack.blogspot.com/2012/06/rsvg-convert-svg-image-conversion-tool.html
 
 You can use one of the following methods to obtain the checksum (SHA256): 
     - Use powershell function 'Get-FileHash'

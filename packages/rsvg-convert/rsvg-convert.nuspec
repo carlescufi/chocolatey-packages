@@ -14,12 +14,13 @@
     <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://gitlab.gnome.org/GNOME/librsvg</projectSourceUrl>
-    <packageSourceUrl>https://opensourcepack.blogspot.com/2012/06/rsvg-convert-svg-image-conversion-tool.html</packageSourceUrl>
+    <packageSourceUrl>https://github.com/carlescufi/chocolatey-packages/tree/master/packages/rsvg-convert</packageSourceUrl>
     <docsUrl>https://developer.gnome.org/rsvg/</docsUrl>
     <bugTrackerUrl>https://gitlab.gnome.org/GNOME/librsvg/issues</bugTrackerUrl>
     <tags>svg librsvg image conversion</tags>
     <summary>rsvg-convert SVG converstion tool.</summary>
-    <description>librsvg is a free software SVG rendering library written as part of the GNOME project, intended to be lightweight and portable. rsvg-convert is a tool to convert SVG files from said library.</description>
+    <description>librsvg is a free software SVG rendering library written as part of the GNOME project, intended to be lightweight and portable. rsvg-convert is a tool to convert SVG files from said library.
+                 The Windows build of rsvg-convert is maintained in https://opensourcepack.blogspot.com/2012/06/rsvg-convert-svg-image-conversion-tool.html</description>
     <releaseNotes>https://gitlab.gnome.org/GNOME/librsvg/blob/master/NEWS</releaseNotes>
   </metadata>
   <files>
