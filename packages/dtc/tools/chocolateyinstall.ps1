@@ -53,5 +53,9 @@ foreach ($file in $allFiles) {
   }
 }
 
+# Delete unneeded folders
+Remove-Item -Recurse -Force $toolsDir\usr\include
+Remove-Item -Recurse -Force $toolsDir\usr\lib
+Remove-Item -Recurse -Force $toolsDir\usr\share
 
 
