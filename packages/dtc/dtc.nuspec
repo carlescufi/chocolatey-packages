@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dtc-msys2</id>
-    <version>1.4.4.20180829</version>
+    <version>1.4.7</version>
     <owners>Carles Cufí</owners>
 
     <title>Device Tree Compiler (MSYS2 version)</title>
