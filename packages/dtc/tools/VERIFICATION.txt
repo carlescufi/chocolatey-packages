@@ -4,17 +4,11 @@ in verifying that this package's contents are trustworthy.
 
 The files included in this package can be obtained from the MSYS2 repository:
 
-* 32-bit:
-http://repo.msys2.org/msys/i686/dtc-1.5.1-2-i686.pkg.tar.xz
-http://repo.msys2.org/msys/i686/msys2-runtime-3.1.7-2-i686.pkg.tar.xz
-http://repo.msys2.org/msys/i686/gcc-libs-9.3.0-1-i686.pkg.tar.xz
-http://repo.msys2.org/msys/i686/libyaml-0.2.4-1-i686.pkg.tar.xz
-
 * 64-bit:
-http://repo.msys2.org/msys/x86_64/dtc-1.5.1-2-x86_64.pkg.tar.xz
-http://repo.msys2.org/msys/x86_64/msys2-runtime-3.1.7-2-x86_64.pkg.tar.xz
-http://repo.msys2.org/msys/x86_64/gcc-libs-9.3.0-1-x86_64.pkg.tar.xz
-http://repo.msys2.org/msys/x86_64/libyaml-0.2.4-1-x86_64.pkg.tar.xz
+https://repo.msys2.org/msys/x86_64/dtc-1.6.1-3-x86_64.pkg.tar.zst
+https://repo.msys2.org/msys/x86_64/msys2-runtime-3.4.5-1-x86_64.pkg.tar.zst
+https://repo.msys2.org/msys/x86_64/gcc-libs-11.3.0-4-x86_64.pkg.tar.zst
+https://repo.msys2.org/msys/x86_64/libyaml-0.2.5-2-x86_64.pkg.tar.zst
 
 You can use one of the following methods to obtain the checksum (SHA256): 
     - Use powershell function 'Get-FileHash'
@@ -22,14 +16,8 @@ You can use one of the following methods to obtain the checksum (SHA256):
 
 Checksums:
 
-* 32-bit:
-dtc-1.5.1-2-i686.pkg.tar.xz: 5442ED283EF9DDAA3BE5B5D4C1C52963A7955613F22E13632616B36C512419ED
-msys2-runtime-3.1.7-2-i686.pkg.tar.xz: F0E3FBF4E5332E06B624559B47B19D12C094ACDB8F201837CCF3014F27F186E4
-gcc-libs-9.3.0-1-i686.pkg.tar.xz: 54F03C84EB192C35298C5A7FC4FF258107207B7BA75F0FDF17E701BA6A174372
-libyaml-0.2.4-1-i686.pkg.tar.xz: 37BC03328B561512EBF86D25E26701CCDB70F0BDBF8C8DFD7EDA4A70004566A6
-
 * 64-bit:
-dtc-1.5.1-2-x86_64.pkg.tar.xz: 35A6936640C23BA33632AD2830A30FC6A47CF3318ADCCE1EE2D4EC7D1DFE0020
-msys2-runtime-3.1.7-2-x86_64.pkg.tar.xz: CEA16E60334E36A0B8250E1B30C5DEDDFDEB341E19729FB27C6450CB13D7B628
-gcc-libs-9.3.0-1-x86_64.pkg.tar.xz: 79A74BB1EF1D7F4EB12F7437AC24371EC9E41A3D96B653A2EC7F09D1E7AA9C63
-libyaml-0.2.4-1-x86_64.pkg.tar.xz: E9240AE944D7EF63FA70BA9730DDDA21AA3FFB95F7AB64E65E00E2AF664672C8
+dtc-1.6.1-3-x86_64.pkg.tar.zst: 7815185E2C1579DA62FD70D6511E0C2DFF212FF43EEF4E24AFBEAADA776F149F
+msys2-runtime-3.4.5-1-x86_64.pkg.tar.zst: C9F05EF31B227A4C037F670FD2218AF18B92E57A10FFC7E334CC323F9454DF09
+gcc-libs-11.3.0-4-x86_64.pkg.tar.zst: 77FC9612C4AC2A4683806B24D057103A8CC1FC4EF6ADE23D13C6925192EF3F8D
+libyaml-0.2.5-2-x86_64.pkg.tar.zst: 11509C6E3133B3FC63F99CC04E89A1CC5685AA746E96BD5F481E3424FBD4F6C1
