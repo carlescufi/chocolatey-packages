@@ -3,22 +3,22 @@
 $packageName= 'dtc-msys2'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-Write-Host "Getting x64 bit yaml .pkg.tar.xz"
-$yamlxvFile = Get-Item "$toolsDir\libyaml-*x86_64.pkg.tar.xz"
+Write-Host "Getting x64 bit yaml .pkg.tar.zst"
+$yamlxvFile = Get-Item "$toolsDir\libyaml-*x86_64.pkg.tar.zst"
 
-Write-Host "Getting x64 bit libs .pkg.tar.xz"
-$libxvFile = Get-Item "$toolsDir\gcc-libs-*x86_64.pkg.tar.xz"
+Write-Host "Getting x64 bit libs .pkg.tar.zst"
+$libxvFile = Get-Item "$toolsDir\gcc-libs-*x86_64.pkg.tar.zst"
 
-Write-Host "Getting x64 bit core .pkg.tar.xz"
-$rtxvFile = Get-Item "$toolsDir\msys2-runtime-*x86_64.pkg.tar.xz"
+Write-Host "Getting x64 bit core .pkg.tar.zst"
+$rtxvFile = Get-Item "$toolsDir\msys2-runtime-*x86_64.pkg.tar.zst"
 
-Write-Host "Getting x64 bit dtc .pkg.tar.xz"
-$dtcxvFile = Get-Item "$toolsDir\dtc-*x86_64.pkg.tar.xz"
+Write-Host "Getting x64 bit dtc .pkg.tar.zst"
+$dtcxvFile = Get-Item "$toolsDir\dtc-*x86_64.pkg.tar.zst"
 
-Get-ChocolateyUnzip -FileFullPath64 $yamlxvfile -Destination $toolsDir
-Get-ChocolateyUnzip -FileFullPath64 $libxvfile -Destination $toolsDir
-Get-ChocolateyUnzip -FileFullPath64 $rtxvfile -Destination $toolsDir
-Get-ChocolateyUnzip -FileFullPath64 $dtcxvfile -Destination $toolsDir
+zstd --quiet --decompress $yamlxvfile
+zstd --quiet --decompress $libxvfile
+zstd --quiet --decompress $rtxvfile
+zstd --quiet --decompress $dtcxvfile
 
 Write-Host "Getting x64 bit libs .pkg.tar"
 $yamltarFile = Get-Item "$toolsDir\libyaml-*x86_64.pkg.tar"
@@ -40,7 +40,7 @@ Get-ChocolateyUnzip -FileFullPath64 $rttarfile -Destination $toolsDir
 Get-ChocolateyUnzip -FileFullPath64 $yamltarfile -Destination $toolsDir
 
 # don't need tars anymore
-Remove-Item ($toolsDir + '\*.' + 'xz')
+Remove-Item ($toolsDir + '\*.' + 'zst')
 Remove-Item ($toolsDir + '\*.' + 'tar')
 
 # Clean up \usr\bin folder, we only need a set of files

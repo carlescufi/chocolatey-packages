@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dtc-msys2</id>
-    <version>1.5.1</version>
+    <version>1.6.1</version>
     <owners>Carles Cufí</owners>
 
     <title>Device Tree Compiler (MSYS2 version)</title>
@@ -21,6 +21,9 @@
     <summary>The command-line Device Tree Compiler.</summary>
     <description>Device Tree Compiler (dtc) toolchain for working with device tree source and binary files and also libfdt, a utility library for reading and manipulating the binary format.</description>
     <releaseNotes>https://git.kernel.org/pub/scm/utils/dtc/dtc.git/tree/README</releaseNotes>
+    <dependencies>
+      <dependency id="zstandard" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
