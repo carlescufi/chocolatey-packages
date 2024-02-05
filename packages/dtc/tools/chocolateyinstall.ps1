@@ -3,49 +3,41 @@
 $packageName= 'dtc-msys2'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$yamlxvFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Getting x64 bit yaml .pkg.tar.xz"; Get-Item "$toolsDir\libyaml-*x86_64.pkg.tar.xz"
-} else { Write-Host "Getting x32 bit yaml .pkg.tar.xz"; Get-Item "$toolsDir\libyaml-*i686.pkg.tar.xz" }
+Write-Host "Getting x64 bit yaml .pkg.tar.xz"
+$yamlxvFile = Get-Item "$toolsDir\libyaml-*x86_64.pkg.tar.xz"
 
-$libxvFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Getting x64 bit libs .pkg.tar.xz"; Get-Item "$toolsDir\gcc-libs-*x86_64.pkg.tar.xz"
-} else { Write-Host "Getting x32 bit libs .pkg.tar.xz"; Get-Item "$toolsDir\gcc-libs-*i686.pkg.tar.xz" }
+Write-Host "Getting x64 bit libs .pkg.tar.xz"
+$libxvFile = Get-Item "$toolsDir\gcc-libs-*x86_64.pkg.tar.xz"
 
-$rtxvFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Getting x64 bit core .pkg.tar.xz"; Get-Item "$toolsDir\msys2-runtime-*x86_64.pkg.tar.xz"
-} else { Write-Host "Getting x32 bit core .pkg.tar.xz"; Get-Item "$toolsDir\msys2-runtime-*i686.pkg.tar.xz" }
+Write-Host "Getting x64 bit core .pkg.tar.xz"
+$rtxvFile = Get-Item "$toolsDir\msys2-runtime-*x86_64.pkg.tar.xz"
 
-$dtcxvFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Getting x64 bit dtc .pkg.tar.xz"; Get-Item "$toolsDir\dtc-*x86_64.pkg.tar.xz"
-} else { Write-Host "Getting x32 bit dtc .pkg.tar.xz"; Get-Item "$toolsDir\dtc-*i686.pkg.tar.xz" }
+Write-Host "Getting x64 bit dtc .pkg.tar.xz"
+$dtcxvFile = Get-Item "$toolsDir\dtc-*x86_64.pkg.tar.xz"
 
-Get-ChocolateyUnzip -FileFullPath $yamlxvfile -Destination $toolsDir
-Get-ChocolateyUnzip -FileFullPath $libxvfile -Destination $toolsDir
-Get-ChocolateyUnzip -FileFullPath $rtxvfile -Destination $toolsDir
-Get-ChocolateyUnzip -FileFullPath $dtcxvfile -Destination $toolsDir
+Get-ChocolateyUnzip -FileFullPath64 $yamlxvfile -Destination $toolsDir
+Get-ChocolateyUnzip -FileFullPath64 $libxvfile -Destination $toolsDir
+Get-ChocolateyUnzip -FileFullPath64 $rtxvfile -Destination $toolsDir
+Get-ChocolateyUnzip -FileFullPath64 $dtcxvfile -Destination $toolsDir
 
-$yamltarFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Getting x64 bit libs .pkg.tar"; Get-Item "$toolsDir\libyaml-*x86_64.pkg.tar"
-} else { Write-Host "Getting x32 bit libs .pkg.tar"; Get-Item "$toolsDir\libyaml-*i686.pkg.tar" }
+Write-Host "Getting x64 bit libs .pkg.tar"
+$yamltarFile = Get-Item "$toolsDir\libyaml-*x86_64.pkg.tar"
 
-$libtarFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Getting x64 bit libs .pkg.tar"; Get-Item "$toolsDir\gcc-libs-*x86_64.pkg.tar"
-} else { Write-Host "Getting x32 bit libs .pkg.tar"; Get-Item "$toolsDir\gcc-libs-*i686.pkg.tar" }
+Write-Host "Getting x64 bit libs .pkg.tar"
+$libtarFile = Get-Item "$toolsDir\gcc-libs-*x86_64.pkg.tar"
 
-$rttarFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Getting x64 bit core .pkg.tar"; Get-Item "$toolsDir\msys2-runtime-*x86_64.pkg.tar"
-} else { Write-Host "Getting x32 bit core .pkg.tar"; Get-Item "$toolsDir\msys2-runtime-*i686.pkg.tar" }
+Write-Host "Getting x64 bit core .pkg.tar"
+$rttarFile = Get-Item "$toolsDir\msys2-runtime-*x86_64.pkg.tar"
 
-$dtctarFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Getting x64 bit dtc .pkg.tar"; Get-Item "$toolsDir\dtc-*x86_64.pkg.tar"
-} else { Write-Host "Getting x32 bit dtc .pkg.tar"; Get-Item "$toolsDir\dtc-*i686.pkg.tar" }
+Write-Host "Getting x64 bit dtc .pkg.tar"
+$dtctarFile = Get-Item "$toolsDir\dtc-*x86_64.pkg.tar"
 
-Get-ChocolateyUnzip -FileFullPath $dtctarfile -Destination $toolsDir
+Get-ChocolateyUnzip -FileFullPath64 $dtctarfile -Destination $toolsDir
 # Get file list for DTC
 $dtcFiles = Get-ChildItem $toolsDir\usr\bin | ForEach-Object { $_.FullName }
-Get-ChocolateyUnzip -FileFullPath $libtarfile -Destination $toolsDir
-Get-ChocolateyUnzip -FileFullPath $rttarfile -Destination $toolsDir
-Get-ChocolateyUnzip -FileFullPath $yamltarfile -Destination $toolsDir
+Get-ChocolateyUnzip -FileFullPath64 $libtarfile -Destination $toolsDir
+Get-ChocolateyUnzip -FileFullPath64 $rttarfile -Destination $toolsDir
+Get-ChocolateyUnzip -FileFullPath64 $yamltarfile -Destination $toolsDir
 
 # don't need tars anymore
 Remove-Item ($toolsDir + '\*.' + 'xz')
